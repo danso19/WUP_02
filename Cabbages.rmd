@@ -54,7 +54,7 @@ From this we are able to keep the same analisis that the c52 cultivation does ha
 ```{r}
 favstats(Cult~VitC,data=veggy)
 ```
-This allows us to explore the mean of of the number of vitamin that each one would carry.
+This allows us to explore the mean of of the number of vitamin that each one would carry on their respective graph.
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ## Inferential Results
