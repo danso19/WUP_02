@@ -24,8 +24,12 @@ veggy <- cabbages
 # Methods
 
 ```{r}
-plot(Cult~VitC,data=veggy)
+basicCN <- ggplot(veggy,aes(x=Cult,y=VitC))
+
+basicCN + geom_boxplot()
 ```
+
+The Vitc differnce between the cult c39 and cult c52 is that on avarage cultc53 posseses more VitC as we can tell from the box plots, this helps us fairly evaluate the median difference between the both cultivations.
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
@@ -37,23 +41,20 @@ plot(Cult~VitC,data=veggy)
 
 ### Graphical Descriptive Results
 
+
+
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ### Numerical Descriptive Results
+
+```{r}
+favstats(Cult~VitC,data=veggy)
+```
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ## Inferential Results
 
-```{r}
-model1 <- aov(Cult~HeadWt,data=veggy)
-summary.aov(model1)
-```
-```{r}
-#we specify the margins starting at the bottom and proceeding clockwise - thus 8.7 is the left side margin to hold the names of the factors
-par(mar = c(3, 8.7, 2, 2))
-plot(TukeyHSD(model1),las=2)
-```
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
