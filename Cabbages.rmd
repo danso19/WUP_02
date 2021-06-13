@@ -5,6 +5,7 @@ date: "6-12-2021"
 output:
   html_document:
     df_print: paged
+  pdf_document: default
 ---
 
 ```{r include=FALSE,echo=FALSE}
@@ -45,6 +46,7 @@ The Vitc differnce between the cult c39 and cult c52 is that on avarage cultc53 
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
+From this we are able to keep the same analisis that the c52 cultivation does have or carry more VitC compared to the toher cultivation of c39.
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ### Numerical Descriptive Results
@@ -52,7 +54,7 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 ```{r}
 favstats(Cult~VitC,data=veggy)
 ```
-
+This allows us to explore the mean of of the number of vitamin that each one would carry.
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ## Inferential Results
@@ -62,5 +64,5 @@ favstats(Cult~VitC,data=veggy)
 
 
 # Discussion and Conclusion
-
+My conclusion would be that the cultivation of c52 did in fact have more VitC that that cultivated of c39 , this is seen throughout the box plots and as we are able to differentate the mean throughout the different number of graphs, so yes as far as we are able to tell c52 did have more VitC.
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
